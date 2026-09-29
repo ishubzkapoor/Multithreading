@@ -1,78 +1,37 @@
-\# C++ Multithreading Examples
+# C++ Multithreading Examples
 
+A small collection of C++ examples for practicing core multithreading and concurrency concepts.
 
+## Topics
 
-This repository contains small C++ examples demonstrating common multithreading and concurrency concepts.
+1. **Thread creation**  
+   Starting and running work using `std::thread`.
 
+2. **Returning values from threads**  
+   Passing results back from work executed in another thread.
 
+3. **Data races**  
+   Demonstrating what happens when multiple threads modify shared data without proper synchronization.
 
-\## Concepts Covered
+4. **Mutexes and locking**  
+   Protecting shared resources using mutexes and locking mechanisms.
 
+5. **Thread-safe counters**  
+   Safely updating shared counters from multiple threads.
 
+6. **Timeouts**  
+   Waiting for thread-related operations with a time limit.
 
-1\. \*\*Creating Threads\*\*  
+7. **Thread synchronization**  
+   Coordinating threads using `std::this_thread::yield()` and `std::condition_variable`.
 
-&#x20;  Basic usage of `std::thread` and running functions concurrently.
+8. **Deadlocks**  
+   Showing how deadlocks can occur when multiple mutexes are acquired in conflicting orders.
 
+## Build
 
-
-2\. \*\*Returning Values from Threads\*\*  
-
-&#x20;  Demonstrates how results can be obtained from work performed in another thread.
-
-
-
-3\. \*\*Data Races\*\*  
-
-&#x20;  Shows what can happen when multiple threads access and modify shared data without synchronization.
-
-
-
-4\. \*\*Mutexes and Locking\*\*  
-
-&#x20;  Demonstrates locking mechanisms such as `std::mutex` and lock guards for protecting shared resources.
-
-
-
-5\. \*\*Thread-Safe Counters\*\*  
-
-&#x20;  Shows how shared counters can be updated safely when accessed by multiple threads.
-
-
-
-6\. \*\*Timeouts\*\*  
-
-&#x20;  Demonstrates how to wait for an operation for a limited amount of time.
-
-
-
-7\. \*\*Thread Synchronization\*\*  
-
-&#x20;  Examples of synchronizing multiple threads using:
-
-&#x20;  - `std::this\_thread::yield()`
-
-&#x20;  - `std::condition\_variable`
-
-
-
-8\. \*\*Deadlocks\*\*  
-
-&#x20;  Demonstrates how deadlocks can occur when multiple mutexes are locked in an unsafe order.
-
-
-
-\## Build
-
-
-
-The project uses CMake.
-
-
+The examples are built with CMake:
 
 ```bash
-
 cmake -S . -B build
-
 cmake --build build
-
